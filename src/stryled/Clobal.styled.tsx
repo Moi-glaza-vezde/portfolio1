@@ -25,6 +25,9 @@ body{
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: ${thems.colors.font};
+  background-color: ${thems.colors.primaryBg};
+  line-height: 1.2;
+
 }
 
 	a{
