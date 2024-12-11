@@ -33,6 +33,7 @@ body{
 	a{
 		text-decoration:none;
 		color:${thems.colors.font};
+		cursor: pointer;
 	}
 
 	ul{
