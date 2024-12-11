@@ -38,7 +38,7 @@ const SkillText = styled.p`
    line-height: 1.4;
    text-align: center;
 `;
-const IconWrapper = styled.div`
+export const IconWrapper = styled.div`
    position: relative;
    &::before {
       position: absolute;
