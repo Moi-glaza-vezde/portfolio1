@@ -39,8 +39,10 @@ body{
 		list-style: none;
 	}
 	button{
-		background-color: unset;
+		background-color: transparent;
 		border: none;
+		cursor: pointer;
+		color: ${thems.colors.font};
 	}
 
 section{
@@ -62,8 +64,7 @@ section{
 
 	}
 	p{
-
-
+		line-height: 1.4;
 		font-size: 14px;
 		font-weight: 400;
 	}
