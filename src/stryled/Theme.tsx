@@ -7,5 +7,9 @@ export const thems = {
       accent: '#7572D5',
 
       font: '#fff',
+
+      borderColor: 'rgba(74, 74, 74, 1)',
+
+      placeholderColor: 'rgba(73, 80, 87, 1)',
    },
 };
