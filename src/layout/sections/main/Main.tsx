@@ -4,12 +4,13 @@ import photo from '../../../assets/images/photo.webp';
 import { FlexWrapper } from '../../../components/FlexWrapper';
 import { Container } from '../../../components/Container';
 import { thems } from '../../../stryled/Theme';
+import { font } from '../../../stryled/Common';
 
 export const Main = () => {
    return (
       <StyledMain>
          <Container>
-            <FlexWrapper align={'center'} justify={'space-between'}>
+            <FlexWrapper align={'center'} justify={'space-between'} wrap={'wrap'}>
                <div>
                   <SmallText>Hi There</SmallText>
                   <Name>
@@ -27,6 +28,7 @@ export const Main = () => {
 };
 
 const SmallText = styled.span`
+   ${font({ weight: 400, Fmax: 27, Fmin: 20 })}
    font-size: 14px;
    font-weight: 400;
 `;
@@ -42,25 +44,26 @@ const Photo = styled.img`
    width: 350px;
    height: 430px;
    object-fit: cover;
+   @media ${thems.media.mobile} {
+      width: 310px;
+      height: 380px;
+   }
 `;
 
 const MainTitle = styled.h1`
-   font-family: 'Poppins', sans-serif;
-   font-size: 27px;
-   font-weight: 400;
+   ${font({ weight: 400, Fmax: 27, Fmin: 20 })}
 `;
 
 const Name = styled.h2`
-   font-family: 'Josefin Sans', sans-serif;
-   font-size: 50px;
-   font-weight: 700;
+   ${font({ family: "'Josefin Sans', sans-serif", weight: 700, Fmax: 50, Fmin: 36 })}
+
+   letter-spacing: 0.05em;
    margin: 10px 0;
 
    span {
       z-index: 0;
-
       position: relative;
-
+      white-space: nowrap;
       &::before {
          content: '';
          display: inline-block;
@@ -72,11 +75,18 @@ const Name = styled.h2`
          z-index: -1;
       }
    }
+
+   @media ${thems.media.mobile} {
+      margin: 15px 0 22px;
+   }
 `;
 const FotoWrapper = styled.div`
    position: relative;
    z-index: 0;
+   margin-top: 65px;
 
+   /* @media ${thems.media.mobile} {
+   } */
    &::before {
       content: '';
       display: inline-block;
@@ -87,5 +97,9 @@ const FotoWrapper = styled.div`
       top: -24px;
       left: 24px;
       z-index: -1;
+      @media ${thems.media.mobile} {
+         width: 314px;
+         height: 414px;
+      }
    }
 `;
