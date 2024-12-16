@@ -33,6 +33,10 @@ const StyledHeaderMeny = styled.nav`
       gap: 30px;
       justify-content: center;
    }
+
+   @media ${thems.media.tablet} {
+      display: none;
+   }
 `;
 
 const Link = styled.a`

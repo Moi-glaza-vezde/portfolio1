@@ -12,4 +12,8 @@ export const thems = {
 
       placeholderColor: 'rgba(73, 80, 87, 1)',
    },
+   media: {
+      tablet: 'screen and (max-width:768px)',
+      mobile: 'screen and (max-width:576px)',
+   },
 };
