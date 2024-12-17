@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { Icon } from '../../components/icon/Icon';
 import { FlexWrapper } from '../../components/FlexWrapper';
 import { thems } from '../../stryled/Theme';
+import { font } from '../../stryled/Common';
 
 export const Footer = () => {
    return (
@@ -58,10 +59,8 @@ const StyledFooter = styled.footer`
 `;
 
 const Name = styled.h3`
-   font-family: 'Josefin Sans' sans-serif;
+   ${font({ family: "'Josefin Sans' sans-serif", weight: 700, Fmax: 23, Fmin: 16 })}
 
-   font-size: 22px;
-   font-weight: 700;
    letter-spacing: 3px;
 `;
 
