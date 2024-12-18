@@ -2,42 +2,30 @@ import React from 'react';
 import styled from 'styled-components';
 import { thems } from '../../../stryled/Theme';
 
-export const HeaderMenu = (props: { menuItems: Array<string> }) => {
+export const Menu: React.FC<{ menuItems: Array<string> }> = (props: {
+   menuItems: Array<string>;
+}) => {
    return (
-      <StyledHeaderMeny>
-         <ul>
-            {props.menuItems.map((item: string, index: number) => {
-               return (
-                  <ListItem key={index}>
-                     <Link href="#">
-                        {item}
+      <ul>
+         {props.menuItems.map((item: string, index: number) => {
+            return (
+               <ListItem key={index}>
+                  <Link href="#">
+                     {item}
 
-                        <Mask>
-                           <span> {item}</span>
-                        </Mask>
-                        <Mask>
-                           <span> {item}</span>
-                        </Mask>
-                     </Link>
-                  </ListItem>
-               );
-            })}
-         </ul>
-      </StyledHeaderMeny>
+                     <Mask>
+                        <span> {item}</span>
+                     </Mask>
+                     <Mask>
+                        <span> {item}</span>
+                     </Mask>
+                  </Link>
+               </ListItem>
+            );
+         })}
+      </ul>
    );
 };
-
-const StyledHeaderMeny = styled.nav`
-   ul {
-      display: flex;
-      gap: 30px;
-      justify-content: center;
-   }
-
-   @media ${thems.media.tablet} {
-      display: none;
-   }
-`;
 
 const Link = styled.a`
    font-family: 'Josefin Sans', sans-serif;
