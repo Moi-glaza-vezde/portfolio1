@@ -2,9 +2,9 @@ import React from 'react';
 import { Logo } from '../../components/logo/Logo';
 import { Container } from '../../components/Container';
 import { FlexWrapper } from '../../components/FlexWrapper';
-import { MobilerMenu } from './mobileMenu/MobileMenu';
+import { MobilerMenu } from './headerMenu/mobileMenu/MobileMenu';
 import { S } from './Header_Styles';
-import { DesktopMenu } from './DesktopMenu/DesktopMenu';
+import { DesktopMenu } from './headerMenu/DesktopMenu/DesktopMenu';
 
 const items = ['Home', 'Skills', 'Works', 'Testimony', 'Contact'];
 
@@ -24,7 +24,7 @@ export const Header: React.FC = () => {
             <FlexWrapper justify={'space-between'} align={'center'}>
                <Logo />
 
-               {width < breakpoint ? (
+               {width <= breakpoint ? (
                   <MobilerMenu menuItems={items} />
                ) : (
                   <DesktopMenu menuItems={items} />
