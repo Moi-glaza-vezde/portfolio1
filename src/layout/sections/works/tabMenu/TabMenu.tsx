@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Link } from '../../../../components/Link';
+import { thems } from '../../../../stryled/Theme';
 
 export const TabMenu = (props: { menuItems: Array<string> }) => {
    return (
@@ -26,6 +27,9 @@ const StyledTabMeny = styled.nav`
       max-width: 352px;
       width: 100%;
       margin: 0 auto 40px;
+      @media ${thems.media.mobile} {
+         margin-top: 70px;
+      }
    }
 `;
 

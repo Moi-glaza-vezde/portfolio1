@@ -8,6 +8,7 @@ import { Work } from './work/Work';
 import socialImg from '../../../assets/images/proj-1.png';
 import timerImg from '../../../assets/images/proj-2.png';
 import { Container } from '../../../components/Container';
+import { thems } from '../../../stryled/Theme';
 
 const worksItems = ['All', 'landing page', 'React', 'spa'];
 export const Works = () => {
@@ -39,7 +40,12 @@ export const Works = () => {
 };
 
 const StyledWorks = styled.section`
+   padding: 85px 0 100px;
    ${FlexWrapper} {
       gap: 30px;
+   }
+
+   @media ${thems.media.mobile} {
+      padding-bottom: 70px;
    }
 `;

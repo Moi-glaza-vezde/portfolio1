@@ -4,6 +4,7 @@ import { SectionTitle } from '../../../components/SectionTitle';
 import { Button } from '../../../components/Button';
 import { Container } from '../../../components/Container';
 import { FlexWrapper } from '../../../components/FlexWrapper';
+import { thems } from '../../../stryled/Theme';
 
 export const Slogan = () => {
    return (
@@ -19,5 +20,14 @@ export const Slogan = () => {
 };
 
 const StyledSlogan = styled.section`
-   min-height: 50vh;
+   padding-bottom: 80px;
+   @media ${thems.media.mobile} {
+      padding-top: 75px;
+   }
+
+   ${Button} {
+      @media ${thems.media.mobile} {
+         margin-top: 40px;
+      }
+   }
 `;

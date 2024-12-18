@@ -26,7 +26,11 @@ export const SectionTitle = styled.h2`
       bottom: -30px;
       transform: translateX(-50%);
       @media ${thems.media.mobile} {
-         bottom: -24px;
+         bottom: -14px;
       }
+   }
+
+   @media ${thems.media.mobile} {
+      margin-bottom: 30px;
    }
 `;

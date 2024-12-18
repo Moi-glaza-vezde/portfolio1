@@ -122,6 +122,10 @@ const BurgerButton = styled.div<{ isOpen: boolean }>`
             `}
       }
    }
+
+   @media ${thems.media.mobile} {
+      top: -110px;
+   }
 `;
 
 const Link = styled.a`

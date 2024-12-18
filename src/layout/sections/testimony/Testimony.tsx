@@ -6,6 +6,7 @@ import { Slider } from '../../../components/slider/Slider';
 import { FlexWrapper } from '../../../components/FlexWrapper';
 import { IconWrapper } from '../skills/skill/Skill';
 import { Container } from '../../../components/Container';
+import { thems } from '../../../stryled/Theme';
 
 export const Testimony = () => {
    return (
@@ -24,9 +25,21 @@ export const Testimony = () => {
 };
 
 const StyledTestimony = styled.section`
-   min-height: 50vh;
-
+   padding: 110px 0 80px;
    ${IconWrapper} {
       margin: 40px 0 72px 0;
+   }
+
+   @media ${thems.media.mobile} {
+      padding-top: 80px;
+   }
+
+   ${SectionTitle} {
+      @media ${thems.media.mobile} {
+         margin-bottom: 60px;
+         &::before {
+            bottom: -18px;
+         }
+      }
    }
 `;

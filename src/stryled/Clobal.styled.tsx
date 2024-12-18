@@ -27,6 +27,7 @@ body{
 	color: ${thems.colors.font};
 	background-color: ${thems.colors.primaryBg};
 	line-height: 1.2;
+	min-width: 360px;
 
 }
 

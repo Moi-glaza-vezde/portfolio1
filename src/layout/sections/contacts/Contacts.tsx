@@ -36,6 +36,10 @@ const StyledForm = styled.form`
       resize: none;
       height: 155px;
    }
+
+   @media ${thems.media.mobile} {
+      margin: 70px auto 0;
+   }
 `;
 
 const Fild = styled.input`

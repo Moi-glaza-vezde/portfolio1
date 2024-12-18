@@ -46,7 +46,7 @@ const Name = styled.span`
    text-transform: uppercase;
    letter-spacing: 1px;
    text-align: center;
-   margin: 22px 0 42px 0;
+   margin: 22px 0 25px 0;
    display: inline-block;
 `;
 
@@ -67,5 +67,9 @@ const Pagination = styled.div`
          width: 20px;
          background-color: ${thems.colors.accent};
       }
+   }
+
+   @media ${thems.media.mobile} {
+      margin-top: 10px;
    }
 `;

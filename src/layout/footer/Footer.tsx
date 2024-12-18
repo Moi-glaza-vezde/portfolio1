@@ -55,7 +55,7 @@ export const Footer = () => {
 
 const StyledFooter = styled.footer`
    background-color: ${thems.colors.primaryBg};
-   padding: 40px 0;
+   padding: 40px 0 40px;
 `;
 
 const Name = styled.h3`
