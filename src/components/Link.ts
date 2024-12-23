@@ -1,8 +1,11 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import { thems } from '../stryled/Theme';
 
-export const Link = styled.a`
+type LinkPropsType = {
+   active?: boolean;
+};
+export const Link = styled.a<LinkPropsType>`
    position: relative;
    z-index: 0;
    font-family: 'Poppins';
@@ -28,5 +31,10 @@ export const Link = styled.a`
       background-color: ${thems.colors.accent};
 
       z-index: -1;
+      ${(props) =>
+         props.active === true &&
+         css<LinkPropsType>`
+            height: 10px;
+         `}
    }
 `;
