@@ -3,6 +3,8 @@ import { font } from '../../stryled/Common';
 import { thems } from '../../stryled/Theme';
 
 const Footer = styled.footer`
+   position: relative;
+
    background-color: ${thems.colors.primaryBg};
    padding: 40px 0 40px;
 `;

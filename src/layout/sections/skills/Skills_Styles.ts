@@ -1,7 +1,9 @@
 import styled from 'styled-components';
 import { thems } from '../../../stryled/Theme';
 
-const Skills = styled.section``;
+const Skills = styled.section`
+   position: relative;
+`;
 
 const Skill = styled.div`
    padding: 42px 20px 52px 20px;

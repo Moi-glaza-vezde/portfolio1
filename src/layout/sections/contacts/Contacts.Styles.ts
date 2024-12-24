@@ -1,7 +1,9 @@
 import styled from 'styled-components';
 import { thems } from '../../../stryled/Theme';
 
-const Contacts = styled.section``;
+const Contacts = styled.section`
+   position: relative;
+`;
 
 const Form = styled.form`
    margin: 0 auto;

@@ -5,6 +5,8 @@ import { Button } from '../../../components/Button';
 import { Link } from '../../../components/Link';
 
 const Works = styled.section`
+   position: relative;
+
    padding: 85px 0 100px;
    ${FlexWrapper} {
       gap: 30px;
