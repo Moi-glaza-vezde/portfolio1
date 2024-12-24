@@ -3,13 +3,8 @@ import { thems } from '../../../stryled/Theme';
 import { Link } from 'react-scroll';
 
 //------------------Menu
-
-const NavLink = styled(Link)`
-   font-family: 'Josefin Sans', sans-serif;
-   font-size: 30px;
-   font-weight: 400;
-   text-align: center;
-   color: transparent;
+const MenuItem = styled.li`
+   position: relative;
 `;
 
 const Mask = styled.span`
@@ -31,8 +26,12 @@ const Mask = styled.span`
    }
 `;
 
-const MenuItem = styled.li`
-   position: relative;
+const NavLink = styled(Link)`
+   font-family: 'Josefin Sans', sans-serif;
+   font-size: 30px;
+   font-weight: 400;
+   text-align: center;
+   color: transparent;
 
    &::before {
       content: '';
@@ -47,7 +46,9 @@ const MenuItem = styled.li`
       z-index: 1;
       transform: scale(0);
    }
-   &:hover {
+
+   &:hover,
+   &.active {
       &::before {
          transform: scale(1);
       }
@@ -61,6 +62,7 @@ const MenuItem = styled.li`
       }
    }
 `;
+
 //--------------------------- Mobile menu
 
 const MobileMenu = styled.nav``;

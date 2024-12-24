@@ -69,9 +69,10 @@ const Name = styled.h2`
    }
 `;
 const FotoWrapper = styled.div`
+   //padding: 0 10px;
    position: relative;
    z-index: 0;
-
+   //min-width: 360px;
    &::before {
       content: '';
       display: inline-block;
@@ -83,7 +84,7 @@ const FotoWrapper = styled.div`
       left: 24px;
       z-index: -1;
       @media ${thems.media.mobile} {
-         width: 320px;
+         width: 310px;
          height: 420px;
 
          top: -25px;

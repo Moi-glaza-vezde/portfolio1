@@ -7,7 +7,8 @@ const Slider = styled.div`
    display: flex;
    flex-direction: column;
    align-items: center;
-   outline: 1px solid red;
+   //  outline: 1px solid red;
+   padding: 0 10px;
 `;
 
 const Slide = styled.div`
