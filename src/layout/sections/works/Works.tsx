@@ -9,6 +9,8 @@ import timerImg from '../../../assets/images/proj-2.png';
 import { Container } from '../../../components/Container';
 import { S } from './Works_Styles';
 
+import { AnimatePresence, motion } from 'framer-motion';
+
 //const tabsItems = ['All', 'landing page', 'React', 'spa'];
 const tabsItems: Array<{ status: TabStatusType; title: string }> = [
    {
@@ -30,12 +32,42 @@ const tabsItems: Array<{ status: TabStatusType; title: string }> = [
 ];
 const worksData = [
    {
+      id: 1,
       src: socialImg,
       title: 'Social Network',
       text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim. Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
       type: 'spa',
    },
    {
+      id: 2,
+      src: timerImg,
+      title: 'Timer',
+      text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim. Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
+      type: 'react',
+   },
+   {
+      id: 3,
+      src: socialImg,
+      title: 'Social Network',
+      text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim. Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
+      type: 'spa',
+   },
+   {
+      id: 4,
+      src: timerImg,
+      title: 'Timer',
+      text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim. Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
+      type: 'react',
+   },
+   {
+      id: 5,
+      src: socialImg,
+      title: 'Social Network',
+      text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim. Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
+      type: 'spa',
+   },
+   {
+      id: 6,
       src: timerImg,
       title: 'Timer',
       text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim. Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
@@ -69,10 +101,22 @@ export const Works: React.FC = () => {
                tabsItems={tabsItems}
                changeFilterStatus={changeFilterStatus}
             />
-            <FlexWrapper justify={'space-between'} align={'flex-start'} wrap={'wrap'}>
-               {filteredWorks.map((w, index) => {
-                  return <Work key={index} src={w.src} title={w.title} text={w.text} />;
-               })}
+            <FlexWrapper justify={'center'} align={'flex-start'} wrap={'wrap'}>
+               <AnimatePresence>
+                  {filteredWorks.map((w, index) => {
+                     return (
+                        <motion.div
+                           style={{ width: '400px', flexGrow: 1, maxWidth: '540px' }}
+                           layout={true}
+                           initial={{ opacity: 0 }}
+                           animate={{ opacity: 1 }}
+                           exit={{ opacity: 0 }}
+                           key={w.id}>
+                           <Work key={w.id} src={w.src} title={w.title} text={w.text} />
+                        </motion.div>
+                     );
+                  })}
+               </AnimatePresence>
             </FlexWrapper>
          </Container>
       </S.Works>
