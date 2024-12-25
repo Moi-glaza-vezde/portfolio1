@@ -33,6 +33,7 @@ const SocialIconLink = styled.a`
    display: flex;
    align-items: center;
    justify-content: center;
+   transition: ${thems.animations.transition};
 
    color: ${thems.colors.accent};
    &:hover {

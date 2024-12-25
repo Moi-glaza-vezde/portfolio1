@@ -29,8 +29,9 @@ export const Link = styled.a<LinkPropsType>`
       display: inline-block;
       //height: 10px;
       background-color: ${thems.colors.accent};
-
       z-index: -1;
+      height: 0;
+      transition: ${thems.animations.transition};
       ${(props) =>
          props.active === true &&
          css<LinkPropsType>`

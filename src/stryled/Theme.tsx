@@ -18,4 +18,7 @@ export const thems = {
       desktop: 'screen and (min-width:1140px)',
       tabletBig: 'screen and (max-width:881px)',
    },
+   animations: {
+      transition: '0.2s ease-in-out',
+   },
 };
